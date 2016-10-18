@@ -7,14 +7,12 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.guava.GuavaCacheManager;
-import org.springframework.cloud.aws.context.config.annotation.EnableContextCredentials;
 import org.springframework.context.annotation.Bean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
 @EnableTransactionManagement
 @EnableCaching
-@EnableContextCredentials(accessKey = "AKIAJJ5QMGMSOPKWZZYA", secretKey = "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")
 public class TutorialAppApplication extends SpringBootServletInitializer {
 
 	@Override

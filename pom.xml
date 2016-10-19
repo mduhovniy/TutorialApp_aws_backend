@@ -75,6 +75,11 @@
 			<groupId>org.thymeleaf</groupId>
 			<artifactId>thymeleaf-spring4</artifactId>
 		</dependency>
+<!--	TODO: Test this dependency instaed!
+		<dependency>
+        		<groupId>org.springframework.boot</groupId>
+        		<artifactId>spring-boot-starter-thymeleaf</artifactId>
+    		</dependency>	-->
 	</dependencies>
 
 	<build>

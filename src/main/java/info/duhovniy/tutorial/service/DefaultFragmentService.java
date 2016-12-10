@@ -15,6 +15,7 @@ import info.duhovniy.tutorial.model.Fragment;
 @Service
 @Qualifier("DefaultFragmentService")
 public class DefaultFragmentService implements FragmentService {
+
 	private static Long nextId;
 	private static Map<Long, Fragment> fragmentMap;
 

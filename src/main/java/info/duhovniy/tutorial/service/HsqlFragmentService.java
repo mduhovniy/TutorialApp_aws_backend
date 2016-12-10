@@ -20,13 +20,16 @@ import info.duhovniy.tutorial.repository.FragmentRepository;
 @Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 public class HsqlFragmentService implements FragmentService {
 
-	@Autowired
 	private FragmentRepository fragmentRepository;
+    private CounterService counterService;
 
-	@Autowired
-	CounterService counterService;
+    @Autowired
+    public HsqlFragmentService(FragmentRepository fragmentRepository, CounterService counterService) {
+        this.fragmentRepository = fragmentRepository;
+        this.counterService = counterService;
+    }
 
-	@Override
+    @Override
 	public Collection<Fragment> findAll() {
 		counterService.increment("HsqlFragmentService.findAll");
 		Collection<Fragment> fragments = fragmentRepository.findAll();
